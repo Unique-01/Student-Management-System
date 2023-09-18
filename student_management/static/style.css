@@ -1,0 +1,157 @@
+/* Add your custom CSS styles here */
+/* Example styles for some sections */
+
+/* Style for Hero Section */
+.hero {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('files.jpg');
+    /* background-image: url('files.jpg'); Replace with your image URL */
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    /* color:gray; */
+    padding: 200px 0 !important;
+    /* height: 50%; */
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Style for Sections */
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+}
+
+/* Style for CTA Buttons */
+.btn-primary {
+    background-color: brown;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #96231c;
+}
+.section-img{
+    width: 500px;
+    max-height: 300px;
+}
+.nav-link{
+    font-size: 0.9rem;
+}
+.bg-brown{
+    background-color: brown;
+}
+
+/* Neumorphic form container */
+.neumorphic-form {
+    background-color: #f0f0f0; /* Light gray background color */
+    box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 16px 0 rgba(255, 255, 255, 0.7); /* Neumorphic box shadow */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+}
+
+/* Neumorphic button */
+.neumorphic-button {
+    background-color: #f0f0f0; /* Light gray background color */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), -4px -4px 8px 0 rgba(255, 255, 255, 0.7); /* Neumorphic box shadow for button */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.neumorphic-button:hover {
+    background-color: #e0e0e0; /* Light gray background color on hover */
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), -2px -2px 4px 0 rgba(255, 255, 255, 0.7); /* Adjusted shadow on hover */
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    background-color: #f0f0f0; /* Light gray input background color */
+    color: #333; /* Dark text color */
+    border: none;
+    border-radius: 10px; /* Rounded corners for inputs */
+    padding: 10px;
+    box-shadow: inset 4px 4px 8px 0 rgba(0, 0, 0, 0.2), inset -4px -4px 8px 0 rgba(255, 255, 255, 0.7); /* Neumorphic box shadow for inputs */
+    transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.2), inset -2px -2px 4px 0 rgba(255, 255, 255, 0.7); /* Adjusted shadow on focus */
+}
+
+/* Staff dashboard styles */
+
+/* .container {
+    max-width: 1000px;
+    margin: 0 auto;
+} */
+
+.form {
+    margin-bottom: 1rem;
+}
+
+.btn-brown {
+    background-color: brown;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.card {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-striped tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-white {
+    color: white;
+}
+
+.text-brown {
+    color: brown;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/* Add your own custom CSS here */

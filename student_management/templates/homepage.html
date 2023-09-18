@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    :. HOME .:
+{% endblock title %}
+    
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-white py-5">
+        <div class="container text-center">
+            <h1>Welcome to Freshman Onboarding</h1>
+            <p>The Freshman Odyssey: Where Challenges become Victory!</p>
+            <a href="#overview" class="btn btn-light btn-lg">Get Started</a>
+        </div>
+    </section>
+    <div class="container">
+        
+        <!-- Registration Section -->
+        <section id="overview" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <h2>Overview</h2>
+                        <p>Welcome to the Freshman Onboarding program at Your University Name! We're excited to have you join our academic community.</p>
+                        <p>Our onboarding program is designed to help you smoothly transition into university life. Whether it's completing your registration, attending orientation, or accessing essential resources, we've got you covered.</p>
+                        {% comment %} <a href="#registration-form" class="btn btn-primary">Get Started</a> {% endcomment %}
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'overview.jpg' %}" alt="" class="section-img">
+                        <!-- Add an image or illustration here if desired -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- File Upload Section -->
+        <section id="registration" class="bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="section-img" src="{% static 'registration.jpg' %}" alt="student_registration">
+                        <!-- Add an image or illustration here if desired -->
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <h2>Registration</h2>
+                        <p>Get started with your academic journey by completing the registration process. This includes submission of documents, obtaining your student ID and setting up your student account, </p>
+                        <a href="{% url 'registration' %}" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Matriculation Section -->
+        <section id="orientation" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <h2>Orientation</h2>
+                        <p>Join us for our comprehensive orientation program, where you'll meet fellow freshmen, learn about campus facilities, and get acquainted with university policies and procedures.</p>
+                        <a href="#" class="btn btn-primary">Explore Orientation</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="section-img" src="{% static 'orientation.jpg' %}" alt="student_orientation">
+                        <!-- Add an image or illustration here if desired -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="resources" class="py-5">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'resources.jpg' %}" alt="" class="section-img">
+                        <!-- Add an image or illustration here if desired -->
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <h2>Resources</h2>
+                        <p>Discover the wide range of resources available to support your academic and personal growth. From the library to academic advising, we're here to help you succeed.</p>
+                        <a href="#" class="btn btn-primary">View Resources</a>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class=" bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <h2>Contact Us</h2>
+                        <p>If you have any questions, feel free to reach out to our support team.</p>
+                        <a href="#contact-form" class="btn btn-primary">Contact Support</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'support.jpg' %}" alt="" class="section-img">
+                        <!-- Add an image or illustration here if desired -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#privacy-policy" class="text-white"><small>Privacy Policy</small></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#terms-of-use" class="text-white text-sm"><small>Terms of Use</small></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#accessibility" class="text-white"><small>Accessibility</small></a>
+                </li>
+            </ul>
+        </div>
+        <p class="text-center">&copy; 2023 Unic Ent. All rights reserved.</p>
+    </footer>
+{% endblock content %}

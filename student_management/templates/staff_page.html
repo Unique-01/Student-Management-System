@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static crispy_forms_tags %}
+{% block title %}
+    Staff Dashboard
+{% endblock title %}
+{% block content %}
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Form -->
+                <div class="card">
+                    <form action="" method="post">
+                        <div class="card-header text-brown">Add Departments</div>
+                        {% csrf_token %}
+                        <div class="card-body">
+                            {{ department_form|crispy }}
+                            <button type="submit" class="btn btn-brown">Add department</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Department card -->
+                <div class="card">
+                    <div class="card-header text-brown">Departments</div>
+                    <div class="card-body">
+                        <table class="table table-striped bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="text-brown">Name</th>
+                                    <th class="text-brown">Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for department in department %}
+                                    <tr>
+                                        <td>{{ department.department_name }}</td>
+                                        <td>{{ department.department_code }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Student filter and table -->
+                <div class="form-group justify-content-between">
+                    <a href="{% url 'generate_batch_matric_number' %}"
+                       class="btn btn-success">Generate Matric Numbers for Approved Students</a>
+                    <a href="{% url 'export_student_records' %}" class="btn btn-info">Export Records</a>
+                </div>
+                <div class="card">
+                    <div class="card-header text-brown">
+                        Students
+                        <div class="form-group float-right form-inline">
+                            <label for="statusFilter">Filter by Status:</label>
+                            <select id="statusFilter" class="form-control">
+                                <option value="">All</option>
+                                <option value="pending">Pending</option>
+                                <option value="approved">Approved</option>
+                                <option value="disapprove">Disapproved</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped bg-white" id="studentTable">
+                            <thead>
+                                <tr>
+                                    <th class="text-brown">Name</th>
+                                    <th class="text-brown">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for student in student %}
+                                    <tr>
+                                        <td>
+                                            <a class="text-brown text-capitalize"
+                                               href="{% url 'student_detail' student.id %}">{{ student.get_full_name }}</a>
+                                        </td>
+                                        <td class="text-capitalize">{{ student.status }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for filtering students based on status
+        document.getElementById("statusFilter").addEventListener("change", function () {
+            const status = this.value;
+            const studentRows = document.querySelectorAll("#studentTable tbody tr");
+
+            studentRows.forEach(function (row) {
+                const statusCell = row.querySelector("td:nth-child(2)");
+
+                if (status === "" || status === statusCell.textContent.toLowerCase()) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        });
+    </script>
+{% endblock content %}
