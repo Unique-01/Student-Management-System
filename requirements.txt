@@ -1,0 +1,9 @@
+asgiref==3.8.1
+crispy-bootstrap4==2024.1
+Django==5.0.7
+django-adminlte3==0.1.6
+django-crispy-forms==2.3
+et-xmlfile==1.1.0
+openpyxl==3.1.5
+python-decouple==3.8
+sqlparse==0.5.1
